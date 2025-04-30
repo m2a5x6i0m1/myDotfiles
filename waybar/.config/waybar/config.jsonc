@@ -1,0 +1,59 @@
+{
+  "layer": "bottom", 
+  "position": "top",
+  "spacing": 0, 
+
+  "modules-left": [
+    "network",
+    "pulseaudio",
+    "backlight"
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "hyprland/language",
+    "clock",
+    "battery"
+  ],
+        
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%B %dth %Y}"
+  },
+
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}",
+    "format-warning": "{icon} {capacity}",
+    "format-critical": "{icon} {capacity}",
+    "format-charging": " {capacity}",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip-format": "{capacity} capacity, {time} left"
+  },
+
+  "network": {
+    "format-wifi": " ",
+    "format-ethernet": " >",
+    "format-disconnected": "󰤭 ",
+    "tooltip-format-wifi": "Essid: {essid}\nSignal Strenght: {signalStrength}%",
+    "tooltip-format-ethernet": "Interface: {ifname}"
+  },
+
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
+    "tooltip-format": "{percent}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": " ",
+    "format-icons": {
+        "default": [" ", " ", " "]
+    },
+    "tooltip-format": "{volume}%"
+  }
+}
