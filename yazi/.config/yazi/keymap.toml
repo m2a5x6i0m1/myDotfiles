@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+	{ on = "-", run = "leave", desc = "Back to the parent directory" },
+	{ on = "<Space>", run = "toggle", desc = "Toggle the current selection state" },
+]

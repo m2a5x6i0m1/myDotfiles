@@ -1,0 +1,8 @@
+[preview]
+image_quality   = 50
+max_width       = 1200
+max_height      = 900
+
+[mgr]
+sort_by        = "extension"
+show_hidden    = true
