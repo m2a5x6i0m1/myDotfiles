@@ -1,0 +1,60 @@
+{
+  "layer": "bottom", 
+  "position": "top",
+  "spacing": 0, 
+
+  "modules-left": [
+    "network",
+    "pulseaudio",
+    "backlight"
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "hyprland/language",
+    "clock",
+    "battery"
+  ],
+        
+  "clock": {
+    "format": "| {:%H:%M} |",
+    "tooltip-format": "{:%B %dth %Y}"
+    // "tooltip-format": "Ticking away~"
+  },
+
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 10
+    },
+    "format": "{capacity} {icon}",
+    "format-warning": "{capacity} {icon}",
+    "format-critical": "{capacity} {icon}",
+    "format-charging": "{capacity}  ",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip-format": "Power draw: {power} Watts\nTime left: {time}"
+  },
+
+  "network": {
+    "format-wifi": "  ",
+    "format-ethernet": "  ",
+    "format-disconnected": " 󰤭 ",
+    "tooltip-format-wifi": "Essid: {essid}\nSignal Strenght: {signalStrength}%",
+    "tooltip-format-ethernet": "Interface: {ifname}"
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}",
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
+    "tooltip-format": "{percent}%"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}",
+    "format-muted": "|   |",
+    "format-icons": {
+        "default": [" "]
+    },
+    "tooltip-format": "{volume}%"
+  }
+}
