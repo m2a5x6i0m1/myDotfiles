@@ -1,0 +1,118 @@
+@import "mocha.css";
+
+* {
+  font-family: "CodeNewRoman Nerd Font";
+  font-size: 15px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: @crust;
+  border-bottom: 2px solid @overlay2;
+}
+
+#window {
+  margin: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+button {
+  box-shadow: inset 0px -3px transparent;
+  border: none;
+  border-radius: 0px;
+}
+
+button:hover {
+  background: inherit;
+  color: @mauve;
+  border-bottom: 2px solid @mauve;
+}
+
+#workspaces button {
+  padding: 0px 0.2em;
+}
+
+#workspaces button.focused {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: @rosewater;
+  border-bottom: 2px solid @rosewater;
+}
+
+#workspaces button.active {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: @mauve;
+  border-bottom: 2px solid @mauve;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#pulseaudio,
+#clock,
+#battery,
+#backlight,
+#network,
+#language {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clock {
+  color: @maroon;
+}
+#pulseaudio {
+  color: @blue;
+}
+
+#network {
+  color: @yellow;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.charging {
+  color: @sky;
+}
+
+#battery.plugged {
+  color: @text;
+}
+
+#language {
+  color: @subtext1;
+}
+
+#backlight {
+  color: @sapphire;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0px;
+}
