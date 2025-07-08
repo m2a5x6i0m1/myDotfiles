@@ -41,6 +41,7 @@ vim.diagnostic.config({
 		current_line = true,
 		underline = true,
 	},
+	underline = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = " ",

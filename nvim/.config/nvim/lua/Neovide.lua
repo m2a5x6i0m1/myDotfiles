@@ -18,7 +18,7 @@ vim.g.neovide_scroll_animation_length = 0.1
 vim.g.neovide_scroll_animation_far_lines = 1
 
 vim.g.neovide_cursor_smooth_blink = true
-vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait8000-blinkoff1200-blinkon1200"
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait1500-blinkoff1200-blinkon1200"
 
 -- Keymaps
 vim.keymap.set("v", "<C-S-c>", '"+y') -- Copy

@@ -35,12 +35,14 @@ Terraria
 Tmux
 Tui
 UWSM
+Valorant
 Ventoy
 Vimium
 Vpn
 Zellij
 alejandra
 alice
+autosync
 blinkoff
 blinkon
 blinkwait

@@ -9,10 +9,10 @@ return {
 			},
 			options = {
 				nixos = {
-					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations.nixos.options',
+					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations."myNixOS-laptop".options',
 				},
 				home_manager = {
-					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations.nixos.options.home-manager.users.type.getSubOptions []',
+					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations."myNixOS-laptop".options.home-manager.users.type.getSubOptions []',
 				},
 			},
 			formatting = {
