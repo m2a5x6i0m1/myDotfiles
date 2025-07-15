@@ -27,5 +27,3 @@ selection-invert-fg-bg = true
 cursor-invert-fg-bg = false
 confirm-close-surface = false
 resize-overlay = never
-
-# TODO: Keybind for a Ghostty quick terminal
