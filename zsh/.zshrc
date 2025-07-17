@@ -54,7 +54,7 @@ zinit light zsh-users/zsh-syntax-highlighting # Must be invoked after all zle -N
 # ---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
 alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
-alias lg='lazygit status'
+alias lg='lazygit'
 alias sv='sudo -E nvim'
 alias nv='nvim'
 alias ..='cd ..'
