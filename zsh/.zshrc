@@ -14,8 +14,7 @@ zinit light zsh-users/zsh-autosuggestions
 
 # ---- Completions ----
 autoload -Uz compinit 
-# zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-# zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} r:|[._-]=** r:|=** l:|=*'
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
@@ -52,7 +51,7 @@ zinit light zsh-users/zsh-syntax-highlighting # Must be invoked after all zle -N
 # -----------------------------
 
 # ---- aliases ----
-alias ls='eza -1 --icons=always --color=always'
+# alias ls='eza -1 --icons=always --color=always'
 alias cl='clear; fastfetch -l nixos_old_small --logo-padding-left 1 --logo-padding-right 3'
 alias lg='lazygit'
 alias sv='sudo -E nvim'

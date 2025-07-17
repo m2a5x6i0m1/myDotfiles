@@ -5,7 +5,6 @@ show=drun
 prompt=Search...
 filter_rate=100
 allow_markup=true
-no_actions=true
 halign=fill
 orientation=vertical
 content_halign=fill
