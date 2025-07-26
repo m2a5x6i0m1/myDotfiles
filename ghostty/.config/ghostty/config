@@ -4,23 +4,31 @@
 # Additionally, each config option is also explained in detail
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
-font-family = CodeNewRoman Nerd Font
-
 theme = catppuccin-mocha
 title = Ghostty
 
-font-size = 13
-font-synthetic-style = false
-font-feature = -calt, -liga, -dlig
+font-size = 14
+adjust-box-thickness = -1
+
+font-family = CodeNewRoman Nerd Font
+font-family-bold =  CodeNewRoman Nerd Font Bold
+font-family-italic =  CodeNewRoman Nerd Font Italic
 
 cursor-color = 
 cursor-text =
 
-window-padding-balance = true
-window-padding-color = extend
-adjust-box-thickness = 0
+shell-integration-features = no-cursor
+cursor-style-blink = false
 
 selection-invert-fg-bg = true
 cursor-invert-fg-bg = false
+
 confirm-close-surface = false
 resize-overlay = never
+
+window-padding-balance = true
+window-padding-color = extend
+
+# custom-shader = ./shaders/glitchy.glsl
+# custom-shader = ./shaders/glow-rgbsplit-twitchy.glsl
+# custom-shader = ./shaders/in-game-crt.glsl
