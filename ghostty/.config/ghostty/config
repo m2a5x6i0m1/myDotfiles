@@ -11,8 +11,6 @@ font-size = 14
 adjust-box-thickness = -1
 
 font-family = CodeNewRoman Nerd Font
-font-family-bold =  CodeNewRoman Nerd Font Bold
-font-family-italic =  CodeNewRoman Nerd Font Italic
 
 cursor-color = 
 cursor-text =
@@ -24,6 +22,7 @@ selection-invert-fg-bg = true
 cursor-invert-fg-bg = false
 
 confirm-close-surface = false
+quit-after-last-window-closed = false
 resize-overlay = never
 
 window-padding-balance = true
@@ -32,3 +31,6 @@ window-padding-color = extend
 # custom-shader = ./shaders/glitchy.glsl
 # custom-shader = ./shaders/glow-rgbsplit-twitchy.glsl
 # custom-shader = ./shaders/in-game-crt.glsl
+custom-shader = ./shaders/bettercrt.glsl
+
+# custom-shader = ./shaders/cursor/cursor_smear.glsl
