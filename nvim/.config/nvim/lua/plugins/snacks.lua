@@ -24,7 +24,7 @@ return {
 
 		notifier = {
 			timeout = 3000,
-			margin = { top = 0, right = 0, bottom = 1 },
+			margin = { top = 0, right = 1, bottom = 1 },
 		},
 
 		picker = {

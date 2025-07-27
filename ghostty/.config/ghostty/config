@@ -31,6 +31,6 @@ window-padding-color = extend
 # custom-shader = ./shaders/glitchy.glsl
 # custom-shader = ./shaders/glow-rgbsplit-twitchy.glsl
 # custom-shader = ./shaders/in-game-crt.glsl
-custom-shader = ./shaders/bettercrt.glsl
+# custom-shader = ./shaders/bettercrt.glsl
 
 # custom-shader = ./shaders/cursor/cursor_smear.glsl

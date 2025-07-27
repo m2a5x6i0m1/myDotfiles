@@ -7,39 +7,32 @@ return {
 	},
 	config = function()
 		require("obsidian").setup({
+
+			legacy_commands = false,
+
+			footer = {
+				enabled = false,
+				-- format = "{{backlinks}} backlinks  {{words}} words",
+			},
+
+			statusline = {
+				enabled = true,
+				format = "{{backlinks}} backlinks  {{words}} words",
+			},
+
 			completion = {
 				nvim_cmp = false,
 				blink = true,
 				min_chars = 2,
 				score_offset = 100,
 			},
-			statusline = {
-				enabled = true,
-				format = "{{backlinks}} backlinks  {{words}} words",
-			},
+
 			ui = {
 				enable = false,
-				checkboxes = {
-					[" "] = { char = "☐", hl_group = "ObsidianTodo" },
-					["x"] = { char = "✔", hl_group = "ObsidianDone" },
-				},
 			},
 
-			mappings = {
-				-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
-				["gf"] = {
-					action = function()
-						return require("obsidian").util.gf_passthrough()
-					end,
-					opts = { noremap = false, expr = true, buffer = true },
-				},
-				-- Smart action depending on context: follow link, show notes with tag, toggle checkbox, or toggle heading fold
-				["<cr>"] = {
-					action = function()
-						return require("obsidian").util.smart_action()
-					end,
-					opts = { buffer = true, expr = true },
-				},
+			checkbox = {
+				order = { " ", "x" },
 			},
 
 			daily_notes = {
@@ -48,30 +41,33 @@ return {
 				default_tags = {},
 			},
 
-			dir = "~/myNotes",
+			workspaces = {
+				{
+					name = "personal",
+					path = "~/myNotes",
+				},
+			},
+
+			templates = {
+				folder = "Templates",
+			},
+
+			picker = {
+				name = "snacks.pick",
+			},
+
+			backlinks = {
+				parse_headers = false,
+			},
+
 			notes_subdir = "3 Resources",
+
 			new_notes_location = "notes_subdir",
-			templates = { folder = "Templates" },
 
 			preferred_link_style = "wiki",
-			picker = { name = "snacks.pick" },
-			backlinks = { parse_headers = false },
 
-			note_frontmatter_func = function(note)
-				local out = { tags = note.tags, date = os.date("%Y-%m-%d") }
-				if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-					for k, v in pairs(note.metadata) do
-						out[k] = v
-					end
-				end
-				return out
-			end,
-
+			-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
 			note_id_func = function(title)
-				-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
-				-- In this case a note with the title 'My new note' will be given an ID that looks
-				-- like '1657296016-my-new-note', and therefore the filename '1657296016-my-new-note.md'.
-				-- You may have as many periods in the note ID as you'd like—the ".md" will be added automatically
 				local suffix = ""
 				if title ~= nil then
 					-- If title is given, transform it into valid filename.
@@ -84,8 +80,29 @@ return {
 				end
 				return tostring(os.time()) .. "-" .. suffix
 			end,
+
+			-- Default tags for frontmatter + save if any others
+			note_frontmatter_func = function(note)
+				local out = { tags = note.tags, date = os.date("%Y-%m-%d") }
+				if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+					for k, v in pairs(note.metadata) do
+						out[k] = v
+					end
+				end
+				return out
+			end,
+
+			-- Remove keymap that conflicts with mini.bracketed
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "ObsidianNoteEnter",
+				callback = function(ev)
+					vim.keymap.del("n", "[o", { buffer = ev.buf })
+					vim.keymap.del("n", "]o", { buffer = ev.buf })
+				end,
+			}),
 		})
 
+		-- Personal preference
 		vim.keymap.set("n", "<leader>nn", "<cmd>Obsidian new<cr>", { desc = "New" })
 		vim.keymap.set("n", "<leader>nd", "<cmd>Obsidian today<cr>", { desc = "Daily note" })
 		vim.keymap.set("n", "<leader>nN", "<cmd>Obsidian new_from_template<cr>", { desc = "New from template" })
