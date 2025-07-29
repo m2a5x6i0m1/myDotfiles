@@ -9,14 +9,14 @@ return {
 			},
 			options = {
 				nixos = {
-					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations."myNixOS-laptop".options',
+					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations."desktop".options',
 				},
 				home_manager = {
-					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations."myNixOS-laptop".options.home-manager.users.type.getSubOptions []',
+					expr = '(builtins.getFlake "/home/max/myNixOS").nixosConfigurations."desktop".options.home-manager.users.type.getSubOptions []',
 				},
 			},
 			formatting = {
-				command = { "alejandra" },
+				command = { "nixfmt" },
 			},
 		},
 	},

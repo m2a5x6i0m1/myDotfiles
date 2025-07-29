@@ -7,7 +7,7 @@ return {
 				cpp = { "clang-format" },
 				python = { "isort", "black" },
 				lua = { "stylua" },
-				nix = { "alejandra" },
+				nix = { "nixfmt" },
 				markdown = { "prettierd" },
 				json = { "prettierd" },
 				css = { "prettierd" },
