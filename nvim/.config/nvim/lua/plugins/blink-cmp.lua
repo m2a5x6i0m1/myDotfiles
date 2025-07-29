@@ -21,7 +21,10 @@ return {
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 600,
-				window = { max_height = 16 },
+				window = {
+					max_height = 16,
+					border = "rounded",
+				},
 			},
 			list = {
 				selection = { preselect = false, auto_insert = false },
@@ -37,6 +40,7 @@ return {
 				max_height = 8,
 				scrollbar = false,
 				direction_priority = { "s", "n" },
+				border = "rounded",
 			},
 			keyword = { range = "full" },
 			ghost_text = { enabled = true },
@@ -55,6 +59,11 @@ return {
 			use_nvim_cmp_as_default = false,
 			nerd_font_variant = "normal",
 		},
-		signature = { enabled = true },
+		signature = {
+			enabled = true,
+			window = {
+				border = "rounded",
+			},
+		},
 	},
 }

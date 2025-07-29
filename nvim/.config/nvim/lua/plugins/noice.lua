@@ -6,10 +6,6 @@ return {
 	config = function()
 		require("noice").setup({
 
-			messages = { enabled = true },
-			popupmenu = { enabled = false },
-			notify = { enabled = false },
-
 			lsp = {
 				progress = { enabled = true },
 				message = { enabled = true },
@@ -21,12 +17,9 @@ return {
 				},
 			},
 
-			views = {
-				cmdline_popup = {
-					position = { row = "71%" },
-					size = { min_width = 61 },
-				},
-			},
+			messages = { enabled = true },
+			popupmenu = { enabled = false },
+			notify = { enabled = false },
 		})
 	end,
 }
