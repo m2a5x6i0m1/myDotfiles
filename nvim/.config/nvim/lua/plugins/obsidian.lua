@@ -11,11 +11,6 @@ return {
 			legacy_commands = false,
 
 			footer = {
-				enabled = false,
-				-- format = "{{backlinks}} backlinks  {{words}} words",
-			},
-
-			statusline = {
 				enabled = true,
 				format = "{{backlinks}} backlinks  {{words}} words",
 			},

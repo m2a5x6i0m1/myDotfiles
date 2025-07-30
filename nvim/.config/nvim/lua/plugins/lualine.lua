@@ -25,15 +25,6 @@ return {
 				},
 				lualine_c = {},
 				lualine_x = {
-					{
-						function()
-							-- Only show obsidian.nvim statusline when editing markdown
-							if vim.bo.filetype == "markdown" then
-								return vim.g.obsidian
-							end
-							return ""
-						end,
-					},
 					{ "filename" },
 					{
 						lazy_status.updates,
