@@ -4,22 +4,17 @@
 # Additionally, each config option is also explained in detail
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
-theme = catppuccin-mocha
 title = Ghostty
+theme = catppuccin-mocha
+window-decoration = false
 
 font-size = 14
 adjust-box-thickness = -1
 
 font-family = CodeNewRoman Nerd Font
 
-cursor-color = 
-cursor-text =
-
 shell-integration-features = no-cursor
-cursor-style-blink = false
-
-selection-invert-fg-bg = true
-cursor-invert-fg-bg = false
+cursor-style-blink = true
 
 confirm-close-surface = false
 quit-after-last-window-closed = false
@@ -33,4 +28,28 @@ window-padding-color = extend
 # custom-shader = ./shaders/in-game-crt.glsl
 # custom-shader = ./shaders/bettercrt.glsl
 
-# custom-shader = ./shaders/cursor/cursor_smear.glsl
+custom-shader = ./shaders/cursor/cursor_smear.glsl
+
+# A repeatable configuration to set one or more font variations values for
+# a variable font. A variable font is a single font, usually with a filename
+# ending in `-VF.ttf` or `-VF.otf` that contains one or more configurable axes
+# for things such as weight, slant, etc. Not all fonts support variations;
+# only fonts that explicitly state they are variable fonts will work.
+# 
+# The format of this is `id=value` where `id` is the axis identifier. An axis
+# identifier is always a 4 character string, such as `wght`. To get the list
+# of supported axes, look at your font documentation or use a font inspection
+# tool.
+# 
+# Invalid ids and values are usually ignored. For example, if a font only
+# supports weights from 100 to 700, setting `wght=800` will do nothing (it
+# will not be clamped to 700). You must consult your font's documentation to
+# see what values are supported.
+# 
+# Common axes are: `wght` (weight), `slnt` (slant), `ital` (italic), `opsz`
+# (optical size), `wdth` (width), `GRAD` (gradient), etc.
+font-variation = 
+
+font-variation-bold = 
+font-variation-italic = 
+font-variation-bold-italic = 
