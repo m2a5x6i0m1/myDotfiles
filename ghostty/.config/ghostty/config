@@ -6,7 +6,6 @@
 
 title = Ghostty
 theme = catppuccin-mocha
-window-decoration = false
 
 font-size = 14
 adjust-box-thickness = -1
@@ -14,7 +13,8 @@ adjust-box-thickness = -1
 font-family = CodeNewRoman Nerd Font
 
 shell-integration-features = no-cursor
-cursor-style-blink = true
+window-decoration = false
+cursor-style-blink = false
 
 confirm-close-surface = false
 quit-after-last-window-closed = false
