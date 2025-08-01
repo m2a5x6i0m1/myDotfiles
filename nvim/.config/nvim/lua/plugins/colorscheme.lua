@@ -24,6 +24,16 @@ return {
 					["@markup.quote"] = { fg = colors.subtext1, style = {} },
 					["RenderMarkdownQuote"] = { fg = colors.maroon },
 					["RenderMarkdownInlineHighlight"] = { fg = colors.yellow, bg = colors.kurface2 },
+
+					["BlinkCmpMenu"] = { bg = colors.base },
+					["BlinkCmpMenuBorder"] = { bg = colors.base, fg = colors.sapphire },
+
+					["BlinkCmpDoc"] = { bg = colors.base },
+					["BlinkCmpDocBorder"] = { bg = colors.base, fg = colors.teal },
+					["BlinkCmpDocSeparator"] = { bg = colors.base, fg = colors.teal },
+
+					["BlinkCmpSignatureHelp"] = { bg = colors.base },
+					["BlinkCmpSignatureHelpBorder"] = { bg = colors.base, fg = colors.teal },
 				}
 			end,
 		})
