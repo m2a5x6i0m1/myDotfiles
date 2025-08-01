@@ -26,14 +26,14 @@ return {
 					["RenderMarkdownInlineHighlight"] = { fg = colors.yellow, bg = colors.kurface2 },
 
 					["BlinkCmpMenu"] = { bg = colors.base },
-					["BlinkCmpMenuBorder"] = { bg = colors.base, fg = colors.sapphire },
+					["BlinkCmpMenuBorder"] = { bg = colors.base, fg = colors.lavender },
 
 					["BlinkCmpDoc"] = { bg = colors.base },
-					["BlinkCmpDocBorder"] = { bg = colors.base, fg = colors.teal },
-					["BlinkCmpDocSeparator"] = { bg = colors.base, fg = colors.teal },
+					["BlinkCmpDocBorder"] = { bg = colors.base, fg = colors.lavender },
+					["BlinkCmpDocSeparator"] = { bg = colors.base },
 
 					["BlinkCmpSignatureHelp"] = { bg = colors.base },
-					["BlinkCmpSignatureHelpBorder"] = { bg = colors.base, fg = colors.teal },
+					["BlinkCmpSignatureHelpBorder"] = { bg = colors.base, fg = colors.lavender },
 				}
 			end,
 		})
