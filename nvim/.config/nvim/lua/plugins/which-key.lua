@@ -7,7 +7,6 @@ return {
 			{ "<leader>f", group = "[F]ind" },
 			{ "<leader>s", group = "[S]plit" },
 			{ "<leader>g", group = "[G]it" },
-			{ "<leader>h", group = "[H]unk" },
 			{ "<leader>l", group = "[L]azy" },
 			{ "<leader>t", group = "[T]oggle" },
 			{ "<leader>r", group = "[R]e" },

@@ -27,8 +27,8 @@
       "critical": 10
     },
     "format": "{icon}",
-    "format-warning": "{icon}",
-    "format-critical": "{icon}",
+    "format-warning": "{icon} {capacity}",
+    "format-critical": "{icon} {capacity}",
     "format-charging": " {capacity}",
     "format-icons": [" ", " ", " ", " ", " "],
     "tooltip-format": "{capacity} capacity, {time} left"

@@ -5,8 +5,6 @@ return {
 	config = function()
 		require("obsidian").setup({
 
-			legacy_commands = false,
-
 			footer = {
 				enabled = true,
 				format = "{{backlinks}} backlinks  {{words}} words",
@@ -17,10 +15,6 @@ return {
 				blink = true,
 				min_chars = 2,
 				score_offset = 100,
-			},
-
-			ui = {
-				enable = false,
 			},
 
 			checkbox = {
@@ -40,17 +34,15 @@ return {
 				},
 			},
 
-			templates = {
-				folder = "Templates",
-			},
+			legacy_commands = false,
 
-			picker = {
-				name = "snacks.pick",
-			},
+			ui = { enable = false },
 
-			backlinks = {
-				parse_headers = false,
-			},
+			templates = { folder = "Templates" },
+
+			picker = { name = "snacks.pick" },
+
+			backlinks = { parse_headers = false },
 
 			notes_subdir = "Resources",
 
