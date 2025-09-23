@@ -16,8 +16,9 @@
   ],
         
   "clock": {
-    "format": "{:%H:%M}",
-    "tooltip-format": "{:%B %dth %Y}"
+    "format": "| {:%H:%M} |",
+    // "tooltip-format": "{:%B %dth %Y}"
+    "tooltip-format": "Ticking away~"
   },
 
   "battery": {
@@ -27,32 +28,32 @@
       "critical": 10
     },
     "format": "{icon}",
-    "format-warning": "{icon} {capacity}",
-    "format-critical": "{icon} {capacity}",
-    "format-charging": " {capacity}",
+    "format-warning": "{icon}",
+    "format-critical": "{icon}",
+    "format-charging": " ",
     "format-icons": [" ", " ", " ", " ", " "],
-    "tooltip-format": "{capacity} capacity, {time} left"
+    "tooltip-format": "Power draw: {power} Watts\nPercentage: {capacity}%\nTime left: {time}"
   },
 
   "network": {
-    "format-wifi": " ",
-    "format-ethernet": " >",
-    "format-disconnected": "󰤭 ",
+    "format-wifi": "  ",
+    "format-ethernet": "  ",
+    "format-disconnected": " 󰤭 ",
     "tooltip-format-wifi": "Essid: {essid}\nSignal Strenght: {signalStrength}%",
     "tooltip-format-ethernet": "Interface: {ifname}"
   },
 
   "backlight": {
-    "format": "{icon}",
+    "format": "{icon} {percent}",
     "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
     "tooltip-format": "{percent}%"
   },
 
   "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": " ",
+    "format": "| {icon} {volume} |",
+    "format-muted": "|   |",
     "format-icons": {
-        "default": [" ", " ", " "]
+        "default": [" "]
     },
     "tooltip-format": "{volume}%"
   }

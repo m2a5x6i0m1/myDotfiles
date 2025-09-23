@@ -48,7 +48,6 @@ transient="""
 """
 rtransient="""
 $status\
-$cmd_duration\
 """
 
 
