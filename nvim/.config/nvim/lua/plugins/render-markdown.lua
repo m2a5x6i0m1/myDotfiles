@@ -33,11 +33,6 @@ return {
 				right_pad = 2,
 				min_width = 80,
 			},
-			checkbox = {
-				unchecked = { icon = " 󰄱 " },
-				checked = { icon = " 󰱒 " },
-			},
-			bullet = { icons = { "◆", "◇", "●", "○" } },
 		})
 	end,
 }
