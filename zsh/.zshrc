@@ -57,8 +57,8 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # ---- aliases ----
 alias ls='eza -1 --icons=always --color=always'
-alias rebuild='sudo nixos-rebuild switch --flake ~/myNixOS'
-alias clean='sudo nix-collect-garbage -d'
+alias rebuild='nh os switch --accept-flake-config ~/myNixOS --ask'
+alias clean='nh clean all --ask'
 alias nv='nvim'
 alias lg='lazygit'
 # -----------------
