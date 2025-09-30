@@ -10,7 +10,7 @@ const float DURATION = 0.10; /* tween time (s)                    */
 const float TRAIL_OPACITY = 0.00; /* global α of trail                 */
 const float CURVE_STRENGTH = 0.00; /* −: concave  +: convex             */
 const float EDGE_SOFT = 0.001; /* AA width in NDC units             */
-const float GLOW_RADIUS = 0.002; /* halo thickness (NDC)              */
+const float GLOW_RADIUS = 0.001; /* halo thickness (NDC)              */
 const float GLOW_INTENSITY = 0.90; /* halo α multiplier                 */
 const float CURSOR_HIDE_AT = 1.00; /* hide stand-in when prog ≥ …       */
 /* ─────────────────────────────────────────────────────────────────────── */

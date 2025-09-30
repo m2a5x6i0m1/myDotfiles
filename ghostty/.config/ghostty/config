@@ -17,4 +17,5 @@ resize-overlay = never
 window-padding-balance = true
 window-padding-color = extend
 
-custom-shader = ./wip.glsl
+custom-shader = ./cursor-trail.glsl
+custom-shader = ./cursor-smear.glsl

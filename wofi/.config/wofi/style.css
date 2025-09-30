@@ -12,8 +12,8 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @lavender;
-  border-radius: 8px;
+  border: 1px solid @lavender;
+  border-radius: 2px;
   background-color: @base;
 }
 
@@ -52,10 +52,6 @@ window {
   color: @red;
 }
 
-#input * {
-  outline: 4px solid @red!important;
-}
-
 #text {
   margin: 5px;
   border: none;
@@ -66,19 +62,11 @@ window {
   background-color: @base;
 }
 
-#entry arrow {
-  border: none;
-  color: @lavender;
-}
-
 #entry:selected {
-  border: 0.11em solid @lavender;
+  border: 1px solid @lavender;
+  border-radius: 2px;
 }
 
 #entry:selected #text {
   color: @mauve;
-}
-
-#entry:drop(active) {
-  background-color: @lavender!important;
 }
