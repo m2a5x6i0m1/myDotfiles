@@ -21,7 +21,8 @@ vim.opt.autoindent = true -- Copy indent from current line when starting new one
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.smartcase = true -- If you include mixed case in your search, assumes you want case-sensitive
 
--- cursor line
+-- cursor
+vim.opt.guicursor = "n-v-i-c:block-Cursor"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 5
 
