@@ -44,6 +44,9 @@ zle -N history-beginning-search-forward-end history-search-end
 
 bindkey "^[k" history-beginning-search-backward-end
 bindkey "^[j" history-beginning-search-forward-end
+
+bindkey "^[OA" history-beginning-search-backward-end
+bindkey "^[OB" history-beginning-search-forward-end
 # ---------------------
 
 # ---- Syntax highlighting ----

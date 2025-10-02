@@ -75,7 +75,7 @@ const vec4 TRAIL_COLOR = vec4(0.6, 0.6, 0.6, 0.4);
 const vec4 CURRENT_CURSOR_COLOR = TRAIL_COLOR;
 const vec4 PREVIOUS_CURSOR_COLOR = TRAIL_COLOR;
 const vec4 TRAIL_COLOR_ACCENT = vec4(0.0, 0.0, 0.0, 0.0);
-const float DURATION = .5;
+const float DURATION = .2;
 const float OPACITY = .2;
 // Don't draw trail within that distance * cursor size.
 // This prevents trails from appearing when typing.

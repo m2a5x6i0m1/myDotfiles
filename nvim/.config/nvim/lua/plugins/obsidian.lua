@@ -6,7 +6,7 @@ return {
 		require("obsidian").setup({
 
 			footer = {
-				enabled = true,
+				enabled = false,
 				format = "{{backlinks}} backlinks  {{words}} words",
 			},
 
