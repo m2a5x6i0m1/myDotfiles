@@ -7,12 +7,13 @@ return {
 		})
 
 		vim.lsp.enable({
-			"nixd",
 			"bashls",
+			"clangd",
 			"harper_ls",
 			"lua_ls",
-			"clangd",
+			"nixd",
 			"rust_analyzer",
+			"qmlls",
 		})
 	end,
 }

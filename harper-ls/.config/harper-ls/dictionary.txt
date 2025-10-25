@@ -5,9 +5,13 @@ EFI
 Hyprland
 Jumplist
 Lanzaboote
+LineageOS
 Quickfix
+Quickshell
 UWSM
+VPS
 Vimium
+Vpn
 artix
 btw
 iso
@@ -16,4 +20,6 @@ networkmanager
 nixos
 nmcli
 systemd
+technic
+timebox
 udev
