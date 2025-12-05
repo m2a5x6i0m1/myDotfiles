@@ -13,6 +13,6 @@ PanelWindow {
         top: 90
     }
     implicitWidth: 400
-    exclusiveZone: 0
-    focusable: true
+    exclusiveZone: 0 // Allow overlaying over normal windows
+    focusable: false // When logic would be implemented turn on for ability to pass keyboard input
 }
