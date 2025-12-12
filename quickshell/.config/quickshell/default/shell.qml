@@ -3,4 +3,5 @@ import qs.Modules
 
 Scope {
   Bar {}
+  Osd {}
 }
