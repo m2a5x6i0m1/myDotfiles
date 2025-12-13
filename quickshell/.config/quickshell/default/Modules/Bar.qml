@@ -6,7 +6,11 @@ import QtQuick
 Variants {
   model: Quickshell.screens
   PanelWindow {
-    property color base: "#1e1e2e"
+    property color colBase: "#1e1e2e"
+    property color colPeach: "#fab387"
+    property color colSurface0: "#313244"
+    property color colSurface2: "#585b70"
+    property color colText: "#cdd6f4"
 
     required property var modelData
     screen: modelData
@@ -27,14 +31,14 @@ Variants {
 
     Rectangle {
       anchors.fill: parent
-      color: base
+      color: colBase
       radius: 5
 
       Rectangle {
         anchors.centerIn: parent
         implicitWidth: 210
         implicitHeight: 30
-        color: "transparent"
+        color: colSurface0
 
         RowLayout {
           anchors.fill: parent
@@ -54,7 +58,7 @@ Variants {
 
               Text {
                 text: index + 1
-                color: parent.isActive ? "cyan" : (parent.hasWindows ? "white" : "black")
+                color: parent.isActive ? colPeach : (parent.hasWindows ? colText : colSurface2)
                 anchors.centerIn: parent
                 font.bold: true
               }
