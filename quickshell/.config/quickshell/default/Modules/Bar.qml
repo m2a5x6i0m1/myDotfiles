@@ -3,68 +3,71 @@ import Quickshell.Hyprland
 import QtQuick.Layouts
 import QtQuick
 
-Variants {
-  model: Quickshell.screens
-  PanelWindow {
-    property color colBase: "#1e1e2e"
-    property color colPeach: "#fab387"
-    property color colSurface0: "#313244"
-    property color colSurface2: "#585b70"
-    property color colText: "#cdd6f4"
+Scope {
+  id: barRoot
 
-    required property var modelData
-    screen: modelData
-    anchors {
-      top: true
-      left: true
-      right: true
-    }
+  property color colBase: "#1e1e2e"
+  property color colPeach: "#fab387"
+  property color colSurface0: "#313244"
+  property color colSurface2: "#585b70"
+  property color colText: "#cdd6f4"
 
-    margins {
-      top: 2
-      right: 4
-      left: 4
-    }
+  Variants {
+    model: Quickshell.screens
+    PanelWindow {
+      required property var modelData
+      screen: modelData
 
-    color: "transparent"
-    implicitHeight: 30
+      margins.top: 2
+      margins.right: 4
+      margins.left: 4
 
-    Rectangle {
-      anchors.fill: parent
-      color: colBase
-      radius: 5
+      anchors.top: true
+      anchors.left: true
+      anchors.right: true
+
+      color: "transparent"
+      implicitHeight: 30
 
       Rectangle {
-        anchors.centerIn: parent
-        implicitWidth: 210
-        implicitHeight: 30
-        color: colSurface0
+        anchors.fill: parent
+        color: colBase
+        radius: 5
 
-        RowLayout {
-          anchors.fill: parent
-          spacing: 0
+        Rectangle {
+          anchors.centerIn: parent
+          color: colSurface0
+          radius: 14
 
-          Repeater {
-            model: 10
+          implicitWidth: 210
+          implicitHeight: 26
 
-            Rectangle {
-              Layout.preferredWidth: 20
-              Layout.preferredHeight: parent.height
-              color: "transparent"
+          RowLayout {
+            anchors.fill: parent
+            spacing: 0
 
-              property var workspace: Hyprland.workspaces.values.find(ws => ws.id === index + 1) ?? null
-              property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
-              property bool hasWindows: workspace !== null
+            Repeater {
+              model: 10
 
-              Text {
-                text: index + 1
-                color: parent.isActive ? colPeach : (parent.hasWindows ? colText : colSurface2)
-                anchors.centerIn: parent
-                font.bold: true
-              }
-              MouseArea {
-                anchors.fill: parent
-                onClicked: Hyprland.dispatch("workspace " + (index + 1))
+              Rectangle {
+                Layout.preferredWidth: 20
+                Layout.preferredHeight: parent.height
+                color: "transparent"
+
+                property var workspace: Hyprland.workspaces.values.find(ws => ws.id === index + 1) ?? null
+                property bool isActive: Hyprland.focusedWorkspace.id === (index + 1)
+                property bool hasWindows: workspace !== null
+
+                Text {
+                  text: index + 1
+                  color: parent.isActive ? colPeach : (parent.hasWindows ? colText : colSurface2)
+                  anchors.centerIn: parent
+                  font.bold: true
+                }
+                MouseArea {
+                  anchors.fill: parent
+                  onClicked: Hyprland.dispatch("workspace " + (index + 1))
+                }
               }
             }
           }
