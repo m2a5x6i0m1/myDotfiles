@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Hyprland
-import QtQuick.Layouts
 import QtQuick
+import QtQuick.Layouts
 
 Scope {
   id: barRoot
@@ -43,6 +43,7 @@ Scope {
           implicitHeight: 26
 
           RowLayout {
+            uniformCellSizes: true
             anchors.fill: parent
             spacing: 0
 
@@ -51,19 +52,15 @@ Scope {
 
               Rectangle {
                 Layout.preferredWidth: 20
-                Layout.preferredHeight: parent.height
-                color: "transparent"
+                Layout.preferredHeight: 20
 
                 property var workspace: Hyprland.workspaces.values.find(ws => ws.id === index + 1) ?? null
                 property bool isActive: Hyprland.focusedWorkspace.id === (index + 1)
                 property bool hasWindows: workspace !== null
 
-                Text {
-                  text: index + 1
-                  color: parent.isActive ? colPeach : (parent.hasWindows ? colText : colSurface2)
-                  anchors.centerIn: parent
-                  font.bold: true
-                }
+                color: isActive ? colPeach : (hasWindows ? colText : colSurface2)
+                radius: 15
+
                 MouseArea {
                   anchors.fill: parent
                   onClicked: Hyprland.dispatch("workspace " + (index + 1))
