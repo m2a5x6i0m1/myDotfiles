@@ -23,6 +23,7 @@ frontmatter
 iso
 linux
 ly
+mp3
 networkmanager
 nixos
 nmcli
