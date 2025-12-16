@@ -22,7 +22,7 @@ ShellRoot {
     model: Quickshell.screens
 
     PanelWindow {
-      property var modelData
+      required property var modelData
       screen: modelData
 
       anchors {
