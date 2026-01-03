@@ -62,7 +62,6 @@ eval "$(zoxide init --cmd cd zsh)"
 alias ls='eza -1 --icons=always --color=always'
 alias rebuild='sudo nixos-rebuild switch --flake ~/nixos-dots'
 alias clean='sudo nix-collect-garbage -d; sudo nixos-rebuild switch --flake ~/nixos-dots'
-alias search='nix-search-tv print | fzf --preview "nix-search-tv preview {}" --scheme history'
 alias nv='nvim'
 alias lg='lazygit'
 # -----------------
