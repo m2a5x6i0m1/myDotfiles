@@ -20,7 +20,7 @@ disable_sunset() {
 }
 
 if ! [ -f "$STATUS_FILE" ]; then
-	enable_sunset
+	disable_sunset
 else
 	if [ "$(cat "$STATUS_FILE")" = "true" ]; then
 		disable_sunset
